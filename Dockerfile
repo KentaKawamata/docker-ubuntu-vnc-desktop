@@ -93,3 +93,25 @@ WORKDIR /root
 ENV HOME=/home/ubuntu \
     SHELL=/bin/bash
 ENTRYPOINT ["/startup.sh"]
+
+# librealsense
+# ================================
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get install -y git vim
+
+RUN apt-get install -y libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev libglfw3-dev
+
+WORKDIR /tmp/
+RUN git clone https://github.com/IntelRealSense/librealsense
+
+WORKDIR /tmp/librealsense/
+RUN mkdir build
+
+WORKDIR /tmp/librealsense/build/
+RUN cmake ./../
+RUN make -j8
+RUN make install
+
+WORKDIR /tmp/librealsense/
+RUN cp config/99-realsense-libusb.rules /etc/udev/rules.d/
