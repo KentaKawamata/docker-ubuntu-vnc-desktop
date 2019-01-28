@@ -5,7 +5,7 @@ docker-ubuntu-vnc-desktop
 [![Docker Stars](https://img.shields.io/docker/stars/ct2034/vnc-ros-kinetic-full.svg)](https://hub.docker.com/r/ct2034/vnc-ros-kinetic-full/)
 
 Docker image to provide HTML5 VNC interface to access ROS kinetic on Ubuntu 16.04 with the LXDE desktop environment.  
-This image is based on [ct2034/docker-ubuntu-vnc-desktop](https://github.com/ct2034/docker-ubuntu-vnc-desktop) and [fcwu/docker-ubuntu-vnc-desktop]((https://github.com/fcwu/docker-ubuntu-vnc-desktop).
+This image is based on [ct2034/docker-ubuntu-vnc-desktop](https://github.com/ct2034/docker-ubuntu-vnc-desktop) and [fcwu/docker-ubuntu-vnc-desktop](https://github.com/fcwu/docker-ubuntu-vnc-desktop).
 
 Quick Start
 -------------------------
