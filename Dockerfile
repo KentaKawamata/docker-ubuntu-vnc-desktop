@@ -110,7 +110,7 @@ RUN mkdir build
 
 WORKDIR /tmp/librealsense/build/
 RUN cmake ./../
-RUN make -j8
+RUN make 
 RUN make install
 
 WORKDIR /tmp/librealsense/
