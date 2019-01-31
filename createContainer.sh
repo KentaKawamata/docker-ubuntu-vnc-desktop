@@ -1,3 +1,3 @@
 #!/bin/bash
 
- docker run --privileged -it --name reizouko/ubuntu-vnc-ros-librealsense -p 6080:80 use-realsense
+ docker run --privileged -it --name use-realsense -p 6080:80 reizouko/ubuntu-vnc-ros-librealsense
