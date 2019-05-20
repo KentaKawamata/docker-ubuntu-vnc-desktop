@@ -15,7 +15,6 @@ RUN apt-get update \
         net-tools \
         lxde x11vnc xvfb \
         gtk2-engines-murrine ttf-ubuntu-font-family \
-        firefox \
         nginx \
         python-pip python-dev build-essential \
         mesa-utils libgl1-mesa-dri \
@@ -62,6 +61,10 @@ RUN apt-get update && apt-get install -y \
     ros-kinetic-desktop-full \
     #              A
     #              +--- full desktop \
+    ros-kinetic-geometry-msgs \
+    ros-kinetic-pcl-conversions \
+    ros-kinetic-pcl-ros \
+    ros-kinetic-tf2-ros \
     && rm -rf /var/lib/apt/lists/*
 
 # setup entrypoint
@@ -75,6 +78,8 @@ RUN apt-get update && apt-get install -y \
     terminator \
     gedit \
     okular \
+    tmux \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 # tini for subreap
